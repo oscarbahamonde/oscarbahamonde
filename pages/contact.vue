@@ -3,7 +3,12 @@
     ref="form"
     v-model="valid"
     lazy-validation
+    name="submitForm"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    method="POST"
   >
+    <input type="hidden" name="form-name" value="submitForm" />
     <v-text-field
       v-model="name"
       :counter="10"

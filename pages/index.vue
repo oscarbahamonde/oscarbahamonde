@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center" style="background-color: #121212"  >
-    <v-col cols="12" sm="2" md="3">Hello</v-col>
+    <v-col cols="12" sm="2" md="3"></v-col>
     <v-col cols="12" sm="8" md="6">
       
       <v-card class="tw-shadow-lg" >
@@ -37,12 +37,12 @@
           </div>
           <hr class="my-3" />
           <br />
-          <v-btn elevation="10" nuxt to="/portfolio" color="primary" class="tw-mx-2 tw-ml-4 tw-text-sm"><Icon icon="emojione-v1:briefcase" class="tw-mr-1 tw-mb-1 tw-text-sm" />Portfolio</v-btn><v-btn elevation="10" nuxt to="/contact" color="primary" class="tw-mx-4"><Icon icon="emojione-v1:envelope" class="tw-mr-1 tw-mb-1 tw-text-sm" />Contact</v-btn><v-btn elevation="10" nuxt to="/services" color="primary" class="tw-mx-2 tw-text-sm"><Icon icon="logos:visual-studio-code" class="tw-mr-1 tw-mb-1 tw-text-sm" />Services</v-btn>
+          <v-btn elevation="10" nuxt to="/portfolio" color="primary" class="tw-mx-2 tw-ml-4 tw-text-sm"><Icon icon="emojione-v1:briefcase" class="tw-mr-1 tw-mb-1 tw-text-sm" />Portfolio</v-btn><v-btn elevation="10" nuxt to="/contact" color="primary" class="tw-mx-4"><Icon icon="emojione-v1:envelope" class="tw-mr-1 tw-mb-1 tw-text-sm" />Contact</v-btn><v-btn elevation="10" nuxt to="/services" color="success" class="tw-mx-2 tw-text-sm"><Icon icon="logos:visual-studio-code" class="tw-mr-1 tw-mb-1 tw-text-sm" />Services</v-btn>
           <br />
         </v-card-text>
       </v-card>
     </v-col>
-      <v-col cols="12" sm="2" md="3">Hello</v-col>
+      <v-col cols="12" sm="2" md="3"></v-col>
   </v-row>
 </template>
 

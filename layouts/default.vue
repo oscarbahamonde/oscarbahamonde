@@ -39,7 +39,7 @@
         </v-list-item>
         <v-list-item class="tw-cursor-pointer">
           <Icon icon="vscode-icons:file-type-mongo" color="lime" class="tw-text-3xl" />
-          <h1 class="tw-ml-4 tw-text-black tw-font-bolder tw-font-mono">NuxtJS</h1>
+          <h1 class="tw-ml-4 tw-text-black tw-font-bolder tw-font-mono">MongoDB</h1>
         </v-list-item>
            <v-list-item class="tw-cursor-pointer">
           <Icon icon="logos:git-icon" color="lime" class="tw-text-3xl" />
@@ -58,6 +58,9 @@
         <v-btn>      <v-toolbar-title v-text="title" @click="$nuxt.$router.push('/skills')" />
     </v-btn>
   <v-spacer />
+   <v-btn @click="$nuxt.$router.push('/')">
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
       <v-btn @click="fixed = !fixed">
         <v-icon>mdi-minus</v-icon>
       </v-btn>

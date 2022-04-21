@@ -13,14 +13,14 @@
       v-model="name"
       :counter="10"
       :rules="nameRules"
-      label="Name"
+      label="Tu nombre"
       required
     ></v-text-field>
 
     <v-text-field
       v-model="email"
       :rules="emailRules"
-      label="E-mail"
+      label="Tu E-mail"
       required
     ></v-text-field>
 
@@ -29,14 +29,14 @@
       :rules="messageRules"
       label="Text"
       required
-      placeholder="write your message here"
+      placeholder="Tu mensaje"
       class="tw-w-full tw-bg-slate-700 tw-rounded tw-p-4"
     ></textarea>
 
     <v-checkbox
       v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
+      :rules="[v => !!v || 'Debes aceptar para continuar']"
+      label="Acepto recibir información y contenido exclusivo gratis"
       required
     ></v-checkbox>
 
@@ -64,17 +64,17 @@
       valid: true,
       name: '',
       nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 32) || 'Name must be less than 32 characters',
+        v => !!v || 'Tu nombre es requerido',
+        v => (v && v.length <= 32) || 'El nombre no puede tener más de 32 caracteres',
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'Debes colocar tu E-mail',
+        v => /.+@.+\..+/.test(v) || 'Debes colocar un E-mail válido',
       ],
       text: '',
       textRules: [
-        v => !!v || 'Message is required',
+        v => !!v || 'Debes dejar un mensaje',
         v => (v && v.length <= 144) || 'Message must be less than 144 characters',
       ],
     }),

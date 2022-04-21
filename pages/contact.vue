@@ -26,6 +26,7 @@
 
     <textarea
       v-model="text"
+      :rules="messageRules"
       label="Text"
       required
       placeholder="write your message here"
@@ -45,7 +46,7 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Submit
     </v-btn>
 
     <v-btn
@@ -54,13 +55,6 @@
       @click="reset"
     >
       Reset Form
-    </v-btn>
-
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
     </v-btn>
   </v-form>
 </template>
@@ -71,10 +65,18 @@
       name: '',
       nameRules: [
         v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        v => (v && v.length <= 32) || 'Name must be less than 32 characters',
       ],
       email: '',
-      message: ''
+      emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      ],
+      text: '',
+      textRules: [
+        v => !!v || 'Message is required',
+        v => (v && v.length <= 144) || 'Message must be less than 144 characters',
+      ],
     }),
 
     methods: {

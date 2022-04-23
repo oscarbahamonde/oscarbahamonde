@@ -7,6 +7,7 @@
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     method="POST"
+    @submit.prevent="onSubmit"
   >
     <input type="hidden" name="form-name" value="submitForm" />
     <v-text-field
@@ -41,10 +42,12 @@
     ></v-checkbox>
 
     <v-btn
+      type="submit"
       :disabled="!valid"
       color="success"
       class="mr-4"
       @click="validate"
+      outlined
     >
       Submit
     </v-btn>
@@ -62,6 +65,7 @@
   export default {
     data: () => ({
       valid: true,
+      checkbox: true,
       name: '',
       nameRules: [
         v => !!v || 'Tu nombre es requerido',
@@ -75,7 +79,7 @@
       text: '',
       textRules: [
         v => !!v || 'Debes dejar un mensaje',
-        v => (v && v.length <= 144) || 'Message must be less than 144 characters',
+        v => (v && v.length <= 256) || 'El mensaje debe tener menos de 256 caracteres',
       ],
     }),
 
@@ -86,9 +90,9 @@
       reset () {
         this.$refs.form.reset()
       },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
-    },
+     onSubmit () {
+       alert('Formulario enviado')
+     }
+    }
   }
 </script>

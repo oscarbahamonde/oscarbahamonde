@@ -1,8 +1,7 @@
 <template>
   <v-row justify="center" align="center" style="background-color: #121212"  >
     <v-col cols="12" sm="2" md="3"></v-col>
-    <v-col cols="12" sm="8" md="6">
-      
+    <v-col cols="12" sm="8" md="6">  
       <v-card class="tw-shadow-lg" >
         <h1 class="tw-m-4 tw-text-2xl tw-text-center">
           Bienvenidos a mi web personal soy Oscar Bahamonde y les presento mi CV online.
